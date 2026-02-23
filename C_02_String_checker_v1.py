@@ -17,6 +17,20 @@ def string_checker(user_response, valid_ans):
 
        return "invalid"
 
+def int_check():
+    """Check users enter an integer more than / equal to 13"""
+    error = "Please enter an integer more than / equal to 13."
+    while True:
+        try:
+            response = int(input("What is the game goal? "))
+
+            if response < 13:
+                print(error)
+
+            else:
+                return response
+        except ValueError:
+            print(error)
 
 # Automated testing is below in the form (test_case, expected_value)
 to_test = [
